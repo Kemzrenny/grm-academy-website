@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The GRM Academy - Structure, Clarity, and Excellence</title>
+    <!-- Google Fonts: Plus Jakarta Sans for a modern, high-end tech aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E52521',
+                            black: '#000000',
+                            gray: '#F9F9F9',
+                            darkGray: '#111111',
+                            border: '#EAEAEA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Style tweaks for Grid Overlays, Badges, and Micro-interactions -->
+    <style>
+        /* Modern subtle grid background seen in the Tutorly Hero & Footer */
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        }
+        .grid-bg-dark {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F9F9F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C1C1C1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E52521;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-black bg-white antialiased">
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo area -->
+            <div class="flex items-center space-x-3">
+                <span class="font-extrabold text-xl tracking-tight text-brand-black flex items-center">
+                    GRM <span class="text-brand-red ml-1">ACADEMY</span>
+                </span>
+            </div>
+
+            <!-- Central Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                <a href="#about" class="hover:text-brand-red transition-colors">About Us</a>
+                <a href="#curriculum" class="hover:text-brand-red transition-colors">Curriculum</a>
+                <a href="#why-grm" class="hover:text-brand-red transition-colors">Why GRM</a>
+                <a href="#faqs" class="hover:text-brand-red transition-colors">FAQs</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div>
+                <a href="#enroll" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-brand-black hover:bg-brand-red rounded-full transition-all duration-300">
+                    Enroll Now
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-24 grid-bg border-b border-brand-border overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <!-- Top Trust Badge -->
+                <div class="inline-flex items-center space-x-2 bg-brand-black text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">
+                    <span>★ ★ ★ ★ ★</span>
+                    <span class="text-gray-300">Trusted Corporate Learning Partner</span>
+                </div>
+
+                <!-- Main Bold H1 -->
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-none text-brand-black">
+                    The GRM <br>
+                    <span class="text-brand-red">Academy</span>
+                </h1>
+
+                <!-- Sub-Headline Descriptions -->
+                <p class="text-lg lg:text-xl font-medium text-gray-600 max-w-xl">
+                    Equipping entrepreneurs and professionals with structure, clarity, and excellence.
+                </p>
+
+                <!-- Target Badge Array -->
+                <div class="border-y border-brand-border py-4 my-2 flex flex-wrap gap-y-2 gap-x-6 text-sm font-semibold text-gray-500">
+                    <div>Built for: <span class="text-brand-black font-bold">Entrepreneurs</span></div>
+                    <div>•</div>
+                    <div><span class="text-brand-black font-bold">Professionals</span></div>
+                    <div>•</div>
+                    <div><span class="text-brand-black font-bold">Business Owners</span></div>
+                </div>
+
+                <!-- Launch Details Callout Badge -->
+                <div class="inline-block bg-brand-gray border border-brand-border p-3 rounded-xl text-sm font-semibold text-gray-700">
+                    🚀 Launching by <span class="text-brand-red font-bold">April 2026</span> — 100% Virtual Learning Experience
+                </div>
+
+                <!-- CTA Button Pack -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#enroll" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-red hover:bg-brand-black rounded-full transition-all duration-300 shadow-lg shadow-brand-red/10">
+                        Enroll Now
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                    </a>
+                    <a href="#curriculum" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-brand-black bg-white hover:bg-brand-gray border border-brand-border rounded-full transition-all duration-300">
+                        Explore Curriculum
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Visual Column (Mockup Display) -->
+            <div class="lg:col-span-5 relative">
+                <!-- Float Badge Left -->
+                <div class="absolute -left-6 top-1/4 bg-white border border-brand-border p-4 rounded-xl shadow-xl flex items-center space-x-3 z-10 hidden sm:flex">
+                    <div class="p-2 bg-brand-red/10 rounded-full text-brand-red">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-semibold">Flagship Pathways</p>
+                        <p class="text-sm font-extrabold text-brand-black">2 Standard Programs</p>
+                    </div>
+                </div>
+
+                <!-- Main Video / Image Mockup Container -->
+                <div class="bg-brand-black p-2.5 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div class="bg-brand-darkGray rounded-[20px] overflow-hidden">
+                        <!-- Browser Bar UI -->
+                        <div class="flex items-center justify-between px-4 py-3 bg-brand-darkGray border-b border-white/5">
+                            <div class="flex space-x-1.5">
+                                <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                            </div>
+                            <span class="text-[10px] text-white/40 tracking-wider font-semibold uppercase">grmacademy.hub</span>
+                            <div class="w-8"></div>
+                        </div>
+                        
+                        <!-- Hero Photo (Matches flier entrepreneur persona) -->
+                        <div class="relative group aspect-square lg:aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000&auto=format&fit=crop" 
+                                 alt="Professional Operations" 
+                                 class="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-all duration-500">
+                            <!-- Overlay tint -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Float Badge Right -->
+                <div class="absolute -right-6 bottom-12 bg-white border border-brand-border p-4 rounded-xl shadow-xl flex items-center space-x-3 z-10 hidden sm:flex">
+                    <div class="p-2 bg-brand-red/10 rounded-full text-brand-red">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-semibold">Accreditation</p>
+                        <p class="text-sm font-extrabold text-brand-black">Certified Program</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. TRUST BANNER (Our Partners) -->
+    <section class="py-12 bg-brand-gray border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs uppercase font-extrabold tracking-widest text-gray-400 mb-6">An Initiative Powered By</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80">
+                <!-- Partner 1 -->
+                <div class="flex items-center space-x-2 grayscale hover:grayscale-0 transition duration-300">
+                    <span class="font-extrabold text-base tracking-wider text-brand-black">BUSINESS & CORPORATE LEADERS FELLOWSHIP</span>
+                </div>
+                <!-- Divider -->
+                <span class="text-gray-300 hidden md:inline">|</span>
+                <!-- Partner 2 -->
+                <div class="flex items-center space-x-2 grayscale hover:grayscale-0 transition duration-300">
+                    <span class="font-extrabold text-base tracking-wider text-brand-black">GRM ECONOMIC HUB</span>
+                </div>
+                <!-- Divider -->
+                <span class="text-gray-300 hidden md:inline">|</span>
+                <!-- Partner 3 -->
+                <div class="flex items-center space-x-2 grayscale hover:grayscale-0 transition duration-300">
+                    <span class="font-extrabold text-base tracking-wider text-brand-black">GRM ACADEMY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHY CHOOSE THE ACADEMY -->
+    <section id="about" class="py-24 bg-white border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-red font-bold uppercase tracking-wider text-sm">Why Choose Us</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-brand-black tracking-tight">Why Choose GRM Academy?</h2>
+                <p class="text-gray-600 font-medium">We elevate your professional or venture journey with curated paths, operational clarity, and structured methodologies.</p>
+            </div>
+
+            <!-- Grid Layout mimicking the asymmetrical cards + central image -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left Column Features -->
+                <div class="lg:col-span-4 flex flex-col justify-between gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-brand-gray border border-brand-border p-8 rounded-2xl flex flex-col justify-between h-full hover:shadow-xl hover:shadow-gray-100 transition duration-300">
+                        <div class="bg-brand-black text-white w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg mb-6">01</div>
+                        <div>
+                            <h3 class="font-extrabold text-xl mb-2">Structured Path</h3>
+                            <p class="text-gray-500 text-sm">Every element is formulated meticulously with step-by-step methodologies rather than raw academic speculation.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-brand-gray border border-brand-border p-8 rounded-2xl flex flex-col justify-between h-full hover:shadow-xl hover:shadow-gray-100 transition duration-300">
+                        <div class="bg-brand-black text-white w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg mb-6">02</div>
+                        <div>
+                            <h3 class="font-extrabold text-xl mb-2">100% Virtual</h3>
+                            <p class="text-gray-500 text-sm">Constructed perfectly to adapt directly into your dynamic routine without interrupting ongoing business tasks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Graphic Card -->
+                <div class="lg:col-span-4 bg-brand-black rounded-3xl overflow-hidden p-3 flex flex-col justify-end relative group min-h-[350px]">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Colleagues collaborating" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 transform group-hover:scale-105 transition duration-500">
+                    <div class="relative z-10 bg-brand-black/80 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
+                        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Vision</span>
+                        <h4 class="text-white font-extrabold text-lg mt-1">Driving Growth & Professional Competence Across Ecosystems</h4>
+                    </div>
+                </div>
+
+                <!-- Right Column Features -->
+                <div class="lg:col-span-4 flex flex-col justify-between gap-8">
+                    <!-- Feature 3 -->
+                    <div class="bg-brand-gray border border-brand-border p-8 rounded-2xl flex flex-col justify-between h-full hover:shadow-xl hover:shadow-gray-100 transition duration-300">
+                        <div class="bg-brand-black text-white w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg mb-6">03</div>
+                        <div>
+                            <h3 class="font-extrabold text-xl mb-2">Clarity & Action</h3>
+                            <p class="text-gray-500 text-sm">Designed specifically to produce immediate, verifiable actions you can implement inside your company day one.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-brand-gray border border-brand-border p-8 rounded-2xl flex flex-col justify-between h-full hover:shadow-xl hover:shadow-gray-100 transition duration-300">
+                        <div class="bg-brand-black text-white w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg mb-6">04</div>
+                        <div>
+                            <h3 class="font-extrabold text-xl mb-2">Global Frameworks</h3>
+                            <p class="text-gray-500 text-sm">Taught by standard practitioners with years of experience navigating the local and global business landscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE CURRICULUM PATHWAYS -->
+    <section id="curriculum" class="py-24 bg-brand-gray border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-red font-bold uppercase tracking-wider text-sm">The Curriculum</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-brand-black tracking-tight">Explore our pathways.</h2>
+                <p class="text-gray-600 font-medium">Click on a pathway below to view the module breakdown for our strategic business and career tracks.</p>
+            </div>
+
+            <!-- Split Two Columns Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- TRACK A: BUSINESS ESSENTIALS -->
+                <div class="bg-white border border-brand-border rounded-3xl p-8 lg:p-10 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Header Card Area -->
+                        <div class="flex items-center justify-between mb-6 pb-6 border-b border-brand-border">
+                            <div>
+                                <span class="bg-brand-red/10 text-brand-red text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Pathway 01</span>
+                                <h3 class="text-2xl font-extrabold text-brand-black mt-2">Business Essentials</h3>
+                            </div>
+                            <div class="p-3 bg-brand-gray rounded-2xl text-brand-red">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-82M4 7h16m-16 6h16M4 17h16"/></svg>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm font-medium mb-6">
+                            Tailored explicitly for business owners, executives, and managers looking to transition structure and growth to operational environments.
+                        </p>
+
+                        <!-- Accordion Module List -->
+                        <div class="space-y-3">
+                            <!-- Module 1 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-1')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 1: Understanding Business Landscape</span>
+                                    <span id="bus-mod-1-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-1" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Analyzing global dynamics, macroeconomic variables, competitor positions, and risk architectures.
+                                </div>
+                            </div>
+                            <!-- Module 2 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-2')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 2: Business Planning & Strategy</span>
+                                    <span id="bus-mod-2-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-2" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Strategic canvas design, goal mapping, operational blueprint construction, and scalability architectures.
+                                </div>
+                            </div>
+                            <!-- Module 3 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-3')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 3: Sales & Marketing</span>
+                                    <span id="bus-mod-3-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-3" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Conversion optimization, programmatic lead generation strategies, campaign deployment, and brand authority.
+                                </div>
+                            </div>
+                            <!-- Module 4 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-4')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 4: Financial Management & Accounting</span>
+                                    <span id="bus-mod-4-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-4" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Analyzing profit/loss metrics, capital structures, balance sheets, forecasting tools, and compliance.
+                                </div>
+                            </div>
+                            <!-- Module 5 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-5')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 5: Operations & Supply Chain MGT</span>
+                                    <span id="bus-mod-5-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-5" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Maximizing manufacturing outputs, service pipelines, standard procedures, logistics systems, and metrics tracking.
+                                </div>
+                            </div>
+                            <!-- Module 6 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-6')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 6: Legal, Compliance & HR</span>
+                                    <span id="bus-mod-6-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-6" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Structuring corporate entities, handling standard compliance, team scaling, performance reviews, and retention strategies.
+                                </div>
+                            </div>
+                            <!-- Module 7 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('bus-mod-7')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 7: Technology & Innovation in Business</span>
+                                    <span id="bus-mod-7-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="bus-mod-7" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Leveraging modern digital architecture, automation workflows, AI integrations, and cloud databases for optimization.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-sm text-gray-500 font-bold">100% Virtual Cohorts</span>
+                        <a href="#enroll" class="inline-flex items-center text-sm font-bold text-brand-red hover:text-brand-black transition-colors">
+                            Enroll in Track A
+                            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TRACK B: EARLY CAREER -->
+                <div class="bg-white border border-brand-border rounded-3xl p-8 lg:p-10 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Header Card Area -->
+                        <div class="flex items-center justify-between mb-6 pb-6 border-b border-brand-border">
+                            <div>
+                                <span class="bg-brand-red/10 text-brand-red text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Pathway 02</span>
+                                <h3 class="text-2xl font-extrabold text-brand-black mt-2">Early Career</h3>
+                            </div>
+                            <div class="p-3 bg-brand-gray rounded-2xl text-brand-red">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500 text-sm font-medium mb-6">
+                            Tailored specifically for fresh graduates, early professionals, and individuals aspiring to optimize critical skill foundations.
+                        </p>
+
+                        <!-- Accordion Module List -->
+                        <div class="space-y-3">
+                            <!-- Module 1 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('car-mod-1')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 1: Career Foundations</span>
+                                    <span id="car-mod-1-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="car-mod-1" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Setting clear development milestones, mapping job pathways, mapping potential alignments, and establishing professional goals.
+                                </div>
+                            </div>
+                            <!-- Module 2 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                *<button onclick="toggleAccordion('car-mod-2')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 2: Workforce Readiness</span>
+                                    <span id="car-mod-2-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="car-mod-2" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Understanding corporate landscapes, operating models, work ethic standards, accountability, and project executions.
+                                </div>
+                            </div>
+                            <!-- Module 3 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('car-mod-3')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 3: Digital Literacy</span>
+                                    <span id="car-mod-3-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="car-mod-3" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Mastering operational software, collaborative online spaces, file systems, metrics processing tools, and business applications.
+                                </div>
+                            </div>
+                            <!-- Module 4 -->
+                            <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-gray">
+                                <button onclick="toggleAccordion('car-mod-4')" class="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm text-brand-black hover:bg-brand-border/30 transition-colors">
+                                    <span>Module 4: Effective Communication</span>
+                                    <span id="car-mod-4-icon" class="text-brand-red font-extrabold">+</span>
+                                </button>
+                                <div id="car-mod-4" class="hidden px-5 pb-4 text-xs text-gray-500 leading-relaxed pt-1">
+                                    Mastering formal writing, drafting standard slide presentations, verbal frameworks, corporate etiquette, and email standards.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-sm text-gray-500 font-bold">100% Virtual Cohorts</span>
+                        <a href="#enroll" class="inline-flex items-center text-sm font-bold text-brand-red hover:text-brand-black transition-colors">
+                            Enroll in Track B
+                            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. HOW TO BEGIN (Dark Step-by-Step Block) -->
+    <section class="py-24 bg-brand-black text-white grid-bg-dark relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                <span class="text-brand-red font-bold uppercase tracking-wider text-sm">Our Framework</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight">How to learn with GRM Academy?</h2>
+                <p class="text-gray-400">A clear, simple progression track from application to official execution and certification.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-brand-darkGray border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-xs font-bold text-brand-red bg-brand-red/10 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Step 01</span>
+                    <h3 class="font-extrabold text-2xl mt-6 mb-3 text-white">Select Path</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Choose between our foundational **Business Essentials** or **Early Career** streams based on your current milestones.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-brand-darkGray border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-xs font-bold text-brand-red bg-brand-red/10 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Step 02</span>
+                    <h3 class="font-extrabold text-2xl mt-6 mb-3 text-white">Engage Live</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Access completely interactive virtual sessions led by seasoned market professionals and industry executives.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-brand-darkGray border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-xs font-bold text-brand-red bg-brand-red/10 px-3.5 py-1.5 rounded-full uppercase tracking-wider">Step 03</span>
+                    <h3 class="font-extrabold text-2xl mt-6 mb-3 text-white">Deploy & Certify</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Execute live projects within real operational guidelines to earn your professional validation certificates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FREQUENTLY ASKED QUESTIONS -->
+    <section id="faqs" class="py-24 bg-white border-b border-brand-border">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-red font-bold uppercase tracking-wider text-sm font-semibold">Support</span>
+                <h2 class="text-4xl font-extrabold text-brand-black tracking-tight">Frequently Asked Questions</h2>
+                <p class="text-gray-500 font-medium">Quick answers to standard operational details about our virtual cohorts.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-brand-border rounded-2xl bg-brand-gray overflow-hidden">
+                    <button onclick="toggleAccordion('faq-1')" class="w-full flex items-center justify-between p-6 text-left font-bold text-base text-brand-black hover:bg-brand-border/25 transition-colors">
+                        <span>Who is this program designed for?</span>
+                        <span id="faq-1-icon" class="text-brand-red text-xl font-bold">+</span>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+                        The GRM Academy is structured to serve two distinct groups: founders and owners scaling active organizations (Business Essentials track), and young professionals seeking to secure critical professional foundations (Early Career track).
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-brand-border rounded-2xl bg-brand-gray overflow-hidden">
+                    <button onclick="toggleAccordion('faq-2')" class="w-full flex items-center justify-between p-6 text-left font-bold text-base text-brand-black hover:bg-brand-border/25 transition-colors">
+                        <span>Is the program fully virtual?</span>
+                        <span id="faq-2-icon" class="text-brand-red text-xl font-bold">+</span>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+                        Yes. Our academy is designed as a 100% virtual learning experience, combining structured live virtual sessions, interactive workshops, and downloadable modules that fit seamlessly into busy workflows.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-brand-border rounded-2xl bg-brand-gray overflow-hidden">
+                    <button onclick="toggleAccordion('faq-3')" class="w-full flex items-center justify-between p-6 text-left font-bold text-base text-brand-black hover:bg-brand-border/25 transition-colors">
+                        <span>When will cohorts launch?</span>
+                        <span id="faq-3-icon" class="text-brand-red text-xl font-bold">+</span>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+                        Our flagship cohorts are launching by April 2026. Registering through our waitlist today ensures early access to schedules, preparatory frameworks, and live updates.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-brand-border rounded-2xl bg-brand-gray overflow-hidden">
+                    <button onclick="toggleAccordion('faq-4')" class="w-full flex items-center justify-between p-6 text-left font-bold text-base text-brand-black hover:bg-brand-border/25 transition-colors">
+                        <span>Will I receive a completion certificate?</span>
+                        <span id="faq-4-icon" class="text-brand-red text-xl font-bold">+</span>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+                        Absolutely. All students who complete the milestone assessments, projects, and active cohort obligations receive professional, verified certificates from the GRM Academy.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. HIGH-CONVERTING BOTTOM BANNER / ENROLL FORM -->
+    <section id="enroll" class="py-24 bg-brand-gray border-b border-brand-border grid-bg relative">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-brand-black tracking-tight leading-none">
+                Upgrade your skills. Unlock <br class="hidden sm:inline">
+                <span class="text-brand-red">new opportunities.</span>
+            </h2>
+            <p class="text-gray-600 max-w-xl mx-auto font-medium">
+                Reserve your spot inside our April 2026 cohort today. Build a foundation with complete structure, clarity, and excellence.
+            </p>
+
+            <!-- Registration Waitlist Form Form Box -->
+            <div class="bg-white border border-brand-border p-8 rounded-3xl shadow-xl max-w-lg mx-auto text-left">
+                <form onsubmit="handleRegistration(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Full Name</label>
+                        <input type="text" required placeholder="Enter your full name" class="w-full px-4 py-3 bg-brand-gray border border-brand-border rounded-xl text-sm focus:outline-none focus:border-brand-red font-medium">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email Address</label>
+                        <input type="email" required placeholder="Enter your email" class="w-full px-4 py-3 bg-brand-gray border border-brand-border rounded-xl text-sm focus:outline-none focus:border-brand-red font-medium">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Select Your Pathway</label>
+                        <select required class="w-full px-4 py-3 bg-brand-gray border border-brand-border rounded-xl text-sm focus:outline-none focus:border-brand-red font-semibold text-gray-700">
+                            <option value="business">Pathway A: Business Essentials</option>
+                            <option value="career">Pathway B: Early Career</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-brand-red hover:bg-brand-black text-white font-bold rounded-xl transition-colors duration-300 shadow-md">
+                        Submit Application
+                    </button>
+                </form>
+                <div id="success-msg" class="hidden mt-4 text-center text-sm font-bold text-green-600">
+                    🎉 Application submitted successfully! We will reach out shortly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DARK FOOTER AND NEWSLETTER -->
+    <footer class="bg-brand-black text-white pt-20 pb-12 grid-bg-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Newsletter and Identity Area Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+                <!-- Left brand col -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-2xl font-extrabold tracking-tight">GRM <span class="text-brand-red">ACADEMY</span></span>
+                    <p class="text-gray-400 text-sm max-w-sm leading-relaxed">
+                        A modern, professional-focused corporate virtual learning framework built to transform structures, business ventures, and global career prospects.
+                    </p>
+                </div>
+                <!-- Right Newsletter box -->
+                <div class="lg:col-span-7 space-y-4 lg:pl-12">
+                    <h4 class="font-bold text-lg text-white">Stay updated on active cohorts.</h4>
+                    <p class="text-xs text-gray-400">Receive strategic updates, learning tips, and enrollment calendars directly.</p>
+                    <form class="flex flex-wrap gap-3" onsubmit="event.preventDefault(); alert('Subscribed to newsletter!');">
+                        <input type="email" placeholder="Enter your email" required class="flex-1 min-w-[200px] px-5 py-3 bg-brand-darkGray border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-brand-red">
+                        <button type="submit" class="px-6 py-3 bg-white text-brand-black hover:bg-brand-red hover:text-white font-bold rounded-xl text-sm transition-all duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Credits Area -->
+            <div class="pt-12 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-6">
+                <div>
+                    &copy; 2026 GRM Academy. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-brand-red transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-red transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-brand-red transition-colors">Contact Support</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT -->
+    <script>
+        // Vanilla JS Accordion Handler
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.innerText = '−'; // Changes plus sign to minus
+            } else {
+                el.classList.add('hidden');
+                icon.innerText = '+';
+            }
+        }
+
+        // Form Submit Handler
+        function handleRegistration(event) {
+            event.preventDefault();
+            document.getElementById('success-msg').classList.remove('hidden');
+            event.target.reset(); // Clear input elements
+        }
+    </script>
+</body>
+</html>
